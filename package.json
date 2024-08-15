@@ -1,0 +1,16 @@
+{
+  "name": "feedback-form",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "author": "p-rivero",
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild send.js --bundle --outfile=functions/hooks/send.js --format=esm",
+    "dev": "npm run build && wrangler pages dev public --compatibility-date=2024-08-06",
+    "deploy": "npm run build && wrangler pages deploy public"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.631.0"
+  }
+}
